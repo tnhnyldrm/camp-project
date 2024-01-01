@@ -12,7 +12,6 @@ export default function SignedIn({signOut}) {
                         <Dropdown.Item onClick={signOut} text="Çıkış Yap" icon="sign-out"/>
                     </Dropdown.Menu>
                 </Dropdown>
-
             </Menu.Item>
         </div>
     )

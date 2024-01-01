@@ -3,12 +3,16 @@ import CartSummary from './CartSummary'
 import { Button, Container, Dropdown, Menu } from 'semantic-ui-react'
 import SignedOut from './SignedOut'
 import SignedIn from './SignedIn'
+import {useNavigate } from "react-router-dom";
 
 export default function Navi() {
     const [isAuthenticated, setIsAuthenticated] = useState(true)
+    const navigate = useNavigate()
 
-    function handleSignedOut(params) {
+
+    function handleSignedOut() {
         setIsAuthenticated(false)
+        navigate('/')
     }
 
     function handleSignedIn() {
